@@ -1,0 +1,1 @@
+ALTER TABLE "eventdoor_products" DROP COLUMN IF EXISTS "price";

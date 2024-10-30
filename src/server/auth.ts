@@ -43,6 +43,12 @@ declare module "next-auth" {
  * @see https://next-auth.js.org/configuration/options
  */
 export const authOptions: NextAuthOptions = {
+  debug: true,
+  logger: {
+    error: (code, ...message) => {
+      console.error(code, message);
+    },
+  },
   callbacks: {
     session: ({ session, user }) => ({
       ...session,
